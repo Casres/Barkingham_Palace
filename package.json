@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js"
   },
   "repository": {
@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/Casres/Barkingham_Palace/issues"
   },
-  "homepage": "https://github.com/Casres/Barkingham_Palace#readme"
+  "homepage": "https://github.com/Casres/Barkingham_Palace#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.0"
+  }
 }
