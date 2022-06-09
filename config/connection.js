@@ -1,7 +1,7 @@
 // import the sequelize constructor from the library
 const Sequelize = require('sequelize');
 
-require('dotenv').congif();
+require('dotenv').config();
 
 //heroku env setup
 let sequelize;
