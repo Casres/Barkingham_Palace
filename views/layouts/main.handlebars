@@ -28,6 +28,19 @@
         </div>
       </div>
     </section>
+    <section="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-3">
+            {{#if loggedIn}}
+            <button class="button-logout" id="logout">Logout</button>
+            {{else}}
+            <a href="../login.handlebars"></a>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section">
       <div class="container">
         <div class="columns">
@@ -49,25 +62,11 @@
               <div class="box">
                 <article class="cats_list">
                   <div class="message-body">
-                    {{#each Cats}}
-                      <li>{{this}}</li>
-                    {{/each}}
+                    {{{ body }}}
                   </div>
                 </article>
              
             </div>
-          <div class="box">
-            <h4 id="lorem" class="title is-4">More to come...</h4>
-            <article class="message is-primary">
-              <span class="icon has-text-primary">
-                <i class="fas fa-info-circle"></i>
-              </span>
-              <div class="message-body">
-                Lorem ipsum dolor sit amet, mea ne viderer veritus menandri, id scaevola gloriatur instructior sit.
-              </div>
-            </article>
-          <pre><code class="language-javascript">let i = 0;</code></pre>
-        </div>
       </div>
     </div>
   </div>
