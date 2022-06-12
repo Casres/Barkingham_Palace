@@ -1,28 +1,24 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Employee extends Model {}
+class Owner extends Model {}
 
-Employee.init(
+Owner.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        username: {
+        first_name: {
             type: DataTypes.STRING,
             allowNull: false,
-            // set unnique to true so that username will not be the same within the system
-            unique: true
         },
-        password: {
+        last_name: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [4]
-            }
         }
     }
 )
+
+module.exports = Owner;

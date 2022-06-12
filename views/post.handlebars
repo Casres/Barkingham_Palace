@@ -1,0 +1,39 @@
+<section>
+  <h2>Add a pet</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-name">Name</label>
+      <input type="text" id="post-name" name="post-name" />
+    </div>
+    <div>
+      <label for="post-breed">Breed</label>
+      <input id="post-breed" name="post-breed" />
+    </div>
+    <div>
+        <label for="size">Size</label>
+        <input type="text" id="post-size" name="post-size" />
+    </div>
+    <div>
+        <label for="post-description">Description</label>
+        <input type="text" id="post-description" name="post-description" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Current Animals</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-animal.js"></script>
