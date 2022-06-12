@@ -4,7 +4,7 @@ node_modules/
 .gitignore
 .DS_Store
 .history
-
+.env
 
 
 
